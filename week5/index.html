@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淡江教育科技學系 - 水草特效</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* 防止滾動條出現 */
+        }
+        #background-iframe {
+            position: fixed; /* 固定位置 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* 移除 iframe 邊框 */
+            z-index: 1; /* 放在最下層 */
+        }
+        #p5-canvas-container {
+            position: fixed; /* 固定位置 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2; /* 放在 iframe 上方 */
+            pointer-events: none; /* 讓滑鼠事件穿透到下方的 iframe */
+        }
+    </style>
+</head>
+<body>
+    <iframe id="background-iframe" src="https://www.et.tku.edu.tw"></iframe>
+    <div id="p5-canvas-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
