@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>水底世界：作品展覽區</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <!-- Iframe 顯示區 -->
+    <div id="iframe-wrapper">
+        <div id="close-btn" onclick="closeIframe()">✕ 關閉視窗</div>
+        <iframe id="assignment-display" src="" frameborder="0"></iframe>
+    </div>
+
+    <script src="sketch.js"></script>
+    <script>
+        function closeIframe() {
+            document.getElementById('iframe-wrapper').style.display = 'none';
+            document.getElementById('assignment-display').src = ''; // 清空內容
+        }
+    </script>
+</body>
+</html>
